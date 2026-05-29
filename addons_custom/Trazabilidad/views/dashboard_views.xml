@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- SEARCH VIEW: Sale Order Lines — Filtros para Dashboard       -->
+    <!-- ============================================================ -->
+    <record id="view_sale_order_line_search_dashboard" model="ir.ui.view">
+        <field name="name">sale.order.line.search.dashboard.trazabilidad</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <search string="Análisis de Ventas Cerveceras">
+                <field name="product_id" string="Producto"/>
+                <field name="lote_coccion_id" string="Batch"/>
+                <field name="order_partner_id" string="Cliente"/>
+                <filter name="confirmadas" string="Ventas Confirmadas"
+                        domain="[('state', 'in', ['sale', 'done'])]"/>
+                <separator/>
+                <filter name="con_lote" string="Con Lote Asignado"
+                        domain="[('lote_coccion_id', '!=', False)]"/>
+                <separator/>
+                <filter name="group_by_producto" string="Producto"
+                        context="{'group_by': 'product_id'}"/>
+                <filter name="group_by_mes" string="Mes de Venta"
+                        context="{'group_by': 'create_date:month'}"/>
+                <filter name="group_by_cliente" string="Cliente"
+                        context="{'group_by': 'order_partner_id'}"/>
+                <filter name="group_by_lote" string="Batch de Cocción"
+                        context="{'group_by': 'lote_coccion_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- VISTA PIVOT: Ventas Mensuales por Producto                   -->
+    <!-- ============================================================ -->
+    <record id="view_sale_line_pivot_dashboard" model="ir.ui.view">
+        <field name="name">sale.order.line.pivot.dashboard.trazabilidad</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <pivot string="Ventas Mensuales — Trazabilidad Cervecera">
+                <field name="create_date" type="col" interval="month"/>
+                <field name="product_id" type="row"/>
+                <field name="litros_vendidos" type="measure"/>
+                <field name="product_uom_qty" type="measure" string="Unidades"/>
+                <field name="price_subtotal" type="measure"/>
+                <field name="margen_ganancia" type="measure"/>
+                <field name="rentabilidad_porcentaje" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- VISTA GRAPH: Ventas Mensuales (Barras)                       -->
+    <!-- ============================================================ -->
+    <record id="view_sale_line_graph_dashboard" model="ir.ui.view">
+        <field name="name">sale.order.line.graph.dashboard.trazabilidad</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <graph string="Ventas Mensuales — Gráfico" type="bar" stacked="True">
+                <field name="create_date" type="row" interval="month"/>
+                <field name="product_id" type="col"/>
+                <field name="price_subtotal" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- ACCIÓN: Dashboard de Ventas (Pivot + Graph)                  -->
+    <!-- ============================================================ -->
+    <record id="action_dashboard_ventas" model="ir.actions.act_window">
+        <field name="name">📊 Dashboard de Ventas</field>
+        <field name="res_model">sale.order.line</field>
+        <field name="view_mode">pivot,graph,list</field>
+        <field name="search_view_id" ref="view_sale_order_line_search_dashboard"/>
+        <field name="domain">[('state', 'in', ['sale', 'done']), ('lote_coccion_id', '!=', False)]</field>
+        <field name="context">{
+            'search_default_confirmadas': 1,
+            'search_default_group_by_producto': 1,
+            'search_default_group_by_mes': 1
+        }</field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- ACCIONES SERVER: Top 3 Más Vendidos y Más Rentables          -->
+    <!-- ============================================================ -->
+    <record id="action_top_vendidos_server" model="ir.actions.server">
+        <field name="name">🏆 Top 3 Más Vendidos</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">action = env['product.template'].action_top_vendidos()</field>
+    </record>
+
+    <record id="action_top_rentables_server" model="ir.actions.server">
+        <field name="name">💰 Top 3 Más Rentables</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">action = env['product.template'].action_top_rentables()</field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- ACCIÓN: Alertas de Stock Bajo (Gestión Preventiva JIT)       -->
+    <!-- ============================================================ -->
+    <record id="action_alertas_stock" model="ir.actions.act_window">
+        <field name="name">⚠️ Alertas de Stock Bajo</field>
+        <field name="res_model">cerveza.lote.insumo</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('alerta_stock_bajo', '=', True)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Excelente! No hay insumos con stock bajo.
+            </p>
+            <p>
+                El sistema alerta cuando el stock actual de un insumo
+                es menor o igual al doble de su consumo promedio por lote.
+            </p>
+        </field>
+    </record>
+
+    <!-- ACCIÓN: Rentabilidad por Producto (reemplaza el menú roto anterior) -->
+    <record id="action_dashboard_productos" model="ir.actions.act_window">
+        <field name="name">Rentabilidad por Producto</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_beer', '=', True)]</field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- MENÚ: Dashboard (bajo Planta Cervecera)                      -->
+    <!-- ============================================================ -->
+    <menuitem id="menu_dashboard_root"
+              name="Dashboard"
+              parent="menu_cerveceria_raiz"
+              sequence="5"/>
+
+    <menuitem id="menu_dashboard_ventas"
+              name="📊 Ventas Mensuales"
+              parent="menu_dashboard_root"
+              action="action_dashboard_ventas"
+              sequence="10"/>
+
+    <menuitem id="menu_dashboard_top_vendidos"
+              name="🏆 Top 3 Más Vendidos"
+              parent="menu_dashboard_root"
+              action="action_top_vendidos_server"
+              sequence="20"/>
+
+    <menuitem id="menu_dashboard_top_rentables"
+              name="💰 Top 3 Más Rentables"
+              parent="menu_dashboard_root"
+              action="action_top_rentables_server"
+              sequence="30"/>
+
+    <menuitem id="menu_dashboard_alertas"
+              name="⚠️ Alertas de Stock"
+              parent="menu_dashboard_root"
+              action="action_alertas_stock"
+              sequence="40"/>
+
+    <menuitem id="menu_dashboard_productos"
+              name="Rentabilidad por Producto"
+              parent="menu_dashboard_root"
+              action="action_dashboard_productos"
+              sequence="50"/>
+
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cerveza_receta,cerveza.receta,model_cerveza_receta,base.group_user,1,1,1,1
+access_cerveza_lote_insumo,cerveza.lote.insumo,model_cerveza_lote_insumo,base.group_user,1,1,1,1
+access_cerveza_coccion,cerveza.coccion,model_cerveza_coccion,base.group_user,1,1,1,1

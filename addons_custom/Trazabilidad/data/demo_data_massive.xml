@@ -1,0 +1,1182 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="prod_kro_stout_350ml" model="product.template">
+            <field name="name">Kross Stout 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2300</field>
+            <field name="precio_b2c">2800</field>
+            <field name="list_price">2800</field>
+        </record>
+        <record id="prod_kro_stout_500ml" model="product.template">
+            <field name="name">Kross Stout 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3800</field>
+            <field name="precio_b2c">4400</field>
+            <field name="list_price">4400</field>
+        </record>
+        <record id="prod_kro_lager_350ml" model="product.template">
+            <field name="name">Kross Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2400</field>
+            <field name="precio_b2c">2900</field>
+            <field name="list_price">2900</field>
+        </record>
+        <record id="prod_kro_lager_500ml" model="product.template">
+            <field name="name">Kross Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3400</field>
+            <field name="precio_b2c">4100</field>
+            <field name="list_price">4100</field>
+        </record>
+        <record id="prod_kro_premiumlager_350ml" model="product.template">
+            <field name="name">Kross Premium Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2700</field>
+            <field name="precio_b2c">2800</field>
+            <field name="list_price">2800</field>
+        </record>
+        <record id="prod_kro_premiumlager_500ml" model="product.template">
+            <field name="name">Kross Premium Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3700</field>
+            <field name="precio_b2c">4600</field>
+            <field name="list_price">4600</field>
+        </record>
+        <record id="prod_kro_apa_350ml" model="product.template">
+            <field name="name">Kross APA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2300</field>
+            <field name="precio_b2c">2800</field>
+            <field name="list_price">2800</field>
+        </record>
+        <record id="prod_kro_apa_500ml" model="product.template">
+            <field name="name">Kross APA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3300</field>
+            <field name="precio_b2c">4300</field>
+            <field name="list_price">4300</field>
+        </record>
+        <record id="prod_kro_ipa_350ml" model="product.template">
+            <field name="name">Kross IPA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2400</field>
+            <field name="precio_b2c">3200</field>
+            <field name="list_price">3200</field>
+        </record>
+        <record id="prod_kro_ipa_500ml" model="product.template">
+            <field name="name">Kross IPA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3700</field>
+            <field name="precio_b2c">4000</field>
+            <field name="list_price">4000</field>
+        </record>
+        <record id="prod_fuz_stout_350ml" model="product.template">
+            <field name="name">Fuzz Stout 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2700</field>
+            <field name="precio_b2c">2900</field>
+            <field name="list_price">2900</field>
+        </record>
+        <record id="prod_fuz_stout_500ml" model="product.template">
+            <field name="name">Fuzz Stout 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3800</field>
+            <field name="precio_b2c">4600</field>
+            <field name="list_price">4600</field>
+        </record>
+        <record id="prod_fuz_lager_350ml" model="product.template">
+            <field name="name">Fuzz Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2400</field>
+            <field name="precio_b2c">3100</field>
+            <field name="list_price">3100</field>
+        </record>
+        <record id="prod_fuz_lager_500ml" model="product.template">
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3700</field>
+            <field name="precio_b2c">4400</field>
+            <field name="list_price">4400</field>
+        </record>
+        <record id="prod_fuz_premiumlager_350ml" model="product.template">
+            <field name="name">Fuzz Premium Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2300</field>
+            <field name="precio_b2c">2900</field>
+            <field name="list_price">2900</field>
+        </record>
+        <record id="prod_fuz_premiumlager_500ml" model="product.template">
+            <field name="name">Fuzz Premium Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3800</field>
+            <field name="precio_b2c">4600</field>
+            <field name="list_price">4600</field>
+        </record>
+        <record id="prod_fuz_apa_350ml" model="product.template">
+            <field name="name">Fuzz APA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2500</field>
+            <field name="precio_b2c">3000</field>
+            <field name="list_price">3000</field>
+        </record>
+        <record id="prod_fuz_apa_500ml" model="product.template">
+            <field name="name">Fuzz APA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3400</field>
+            <field name="precio_b2c">4300</field>
+            <field name="list_price">4300</field>
+        </record>
+        <record id="prod_fuz_ipa_350ml" model="product.template">
+            <field name="name">Fuzz IPA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2500</field>
+            <field name="precio_b2c">2800</field>
+            <field name="list_price">2800</field>
+        </record>
+        <record id="prod_fuz_ipa_500ml" model="product.template">
+            <field name="name">Fuzz IPA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3300</field>
+            <field name="precio_b2c">4600</field>
+            <field name="list_price">4600</field>
+        </record>
+        <record id="prod_bun_stout_350ml" model="product.template">
+            <field name="name">Bundor Stout 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2300</field>
+            <field name="precio_b2c">3000</field>
+            <field name="list_price">3000</field>
+        </record>
+        <record id="prod_bun_stout_500ml" model="product.template">
+            <field name="name">Bundor Stout 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3900</field>
+            <field name="precio_b2c">4500</field>
+            <field name="list_price">4500</field>
+        </record>
+        <record id="prod_bun_lager_350ml" model="product.template">
+            <field name="name">Bundor Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2700</field>
+            <field name="precio_b2c">3000</field>
+            <field name="list_price">3000</field>
+        </record>
+        <record id="prod_bun_lager_500ml" model="product.template">
+            <field name="name">Bundor Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3900</field>
+            <field name="precio_b2c">4000</field>
+            <field name="list_price">4000</field>
+        </record>
+        <record id="prod_bun_premiumlager_350ml" model="product.template">
+            <field name="name">Bundor Premium Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2600</field>
+            <field name="precio_b2c">3200</field>
+            <field name="list_price">3200</field>
+        </record>
+        <record id="prod_bun_premiumlager_500ml" model="product.template">
+            <field name="name">Bundor Premium Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3300</field>
+            <field name="precio_b2c">4600</field>
+            <field name="list_price">4600</field>
+        </record>
+        <record id="prod_bun_apa_350ml" model="product.template">
+            <field name="name">Bundor APA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2300</field>
+            <field name="precio_b2c">3200</field>
+            <field name="list_price">3200</field>
+        </record>
+        <record id="prod_bun_apa_500ml" model="product.template">
+            <field name="name">Bundor APA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3500</field>
+            <field name="precio_b2c">4500</field>
+            <field name="list_price">4500</field>
+        </record>
+        <record id="prod_bun_ipa_350ml" model="product.template">
+            <field name="name">Bundor IPA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2700</field>
+            <field name="precio_b2c">2900</field>
+            <field name="list_price">2900</field>
+        </record>
+        <record id="prod_bun_ipa_500ml" model="product.template">
+            <field name="name">Bundor IPA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3800</field>
+            <field name="precio_b2c">4100</field>
+            <field name="list_price">4100</field>
+        </record>
+        <record id="prod_tri_stout_350ml" model="product.template">
+            <field name="name">Trilogía del Sur Stout 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2300</field>
+            <field name="precio_b2c">2900</field>
+            <field name="list_price">2900</field>
+        </record>
+        <record id="prod_tri_stout_500ml" model="product.template">
+            <field name="name">Trilogía del Sur Stout 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3900</field>
+            <field name="precio_b2c">4400</field>
+            <field name="list_price">4400</field>
+        </record>
+        <record id="prod_tri_lager_350ml" model="product.template">
+            <field name="name">Trilogía del Sur Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2300</field>
+            <field name="precio_b2c">2900</field>
+            <field name="list_price">2900</field>
+        </record>
+        <record id="prod_tri_lager_500ml" model="product.template">
+            <field name="name">Trilogía del Sur Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3900</field>
+            <field name="precio_b2c">4100</field>
+            <field name="list_price">4100</field>
+        </record>
+        <record id="prod_tri_premiumlager_350ml" model="product.template">
+            <field name="name">Trilogía del Sur Premium Lager 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2600</field>
+            <field name="precio_b2c">3000</field>
+            <field name="list_price">3000</field>
+        </record>
+        <record id="prod_tri_premiumlager_500ml" model="product.template">
+            <field name="name">Trilogía del Sur Premium Lager 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">lager</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3600</field>
+            <field name="precio_b2c">4500</field>
+            <field name="list_price">4500</field>
+        </record>
+        <record id="prod_tri_apa_350ml" model="product.template">
+            <field name="name">Trilogía del Sur APA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2400</field>
+            <field name="precio_b2c">3000</field>
+            <field name="list_price">3000</field>
+        </record>
+        <record id="prod_tri_apa_500ml" model="product.template">
+            <field name="name">Trilogía del Sur APA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3500</field>
+            <field name="precio_b2c">4300</field>
+            <field name="list_price">4300</field>
+        </record>
+        <record id="prod_tri_ipa_350ml" model="product.template">
+            <field name="name">Trilogía del Sur IPA 350ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">350</field>
+            <field name="volumen_litros">0.35</field>
+            <field name="precio_b2b">2500</field>
+            <field name="precio_b2c">2800</field>
+            <field name="list_price">2800</field>
+        </record>
+        <record id="prod_tri_ipa_500ml" model="product.template">
+            <field name="name">Trilogía del Sur IPA 500ml</field>
+            <field name="type">consu</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+            <field name="formato_ml">500</field>
+            <field name="volumen_litros">0.50</field>
+            <field name="precio_b2b">3700</field>
+            <field name="precio_b2c">4200</field>
+            <field name="list_price">4200</field>
+        </record>
+        <record id="bar_greed" model="res.partner">
+            <field name="name">Greed</field>
+            <field name="is_company">True</field>
+            <field name="vat">CL76100000-K</field>
+        </record>
+        <record id="bar_matureo" model="res.partner">
+            <field name="name">Matureo</field>
+            <field name="is_company">True</field>
+            <field name="vat">CL76200000-K</field>
+        </record>
+        <record id="bar_barhistorico" model="res.partner">
+            <field name="name">Bar Historico</field>
+            <field name="is_company">True</field>
+            <field name="vat">CL76300000-K</field>
+        </record>
+        <record id="bar_riverbar" model="res.partner">
+            <field name="name">River Bar</field>
+            <field name="is_company">True</field>
+            <field name="vat">CL76400000-K</field>
+        </record>
+        <record id="bar_elcairo" model="res.partner">
+            <field name="name">El Cairo</field>
+            <field name="is_company">True</field>
+            <field name="vat">CL76500000-K</field>
+        </record>
+        <record id="bar_planb" model="res.partner">
+            <field name="name">Plan B</field>
+            <field name="is_company">True</field>
+            <field name="vat">CL76600000-K</field>
+        </record>
+        <record id="bar_up" model="res.partner">
+            <field name="name">Up</field>
+            <field name="is_company">True</field>
+            <field name="vat">CL76700000-K</field>
+        </record>
+        <record id="cliente_directo_1" model="res.partner">
+            <field name="name">Javiera Soto</field>
+            <field name="vat">CL12340001-9</field>
+        </record>
+        <record id="cliente_directo_2" model="res.partner">
+            <field name="name">Martín Rojas</field>
+            <field name="vat">CL12340002-9</field>
+        </record>
+        <record id="cliente_directo_3" model="res.partner">
+            <field name="name">Camila Venegas</field>
+            <field name="vat">CL12340003-9</field>
+        </record>
+        <record id="cliente_directo_4" model="res.partner">
+            <field name="name">Diego Espinoza</field>
+            <field name="vat">CL12340004-9</field>
+        </record>
+        <record id="cliente_directo_5" model="res.partner">
+            <field name="name">Valentina Muñoz</field>
+            <field name="vat">CL12340005-9</field>
+        </record>
+        <record id="cliente_directo_6" model="res.partner">
+            <field name="name">Sebastián Reyes</field>
+            <field name="vat">CL12340006-9</field>
+        </record>
+        <record id="cliente_directo_7" model="res.partner">
+            <field name="name">Catalina Herrera</field>
+            <field name="vat">CL12340007-9</field>
+        </record>
+        <record id="cliente_directo_8" model="res.partner">
+            <field name="name">Andrés Lagos</field>
+            <field name="vat">CL12340008-9</field>
+        </record>
+        <record id="coccion_hist_1" model="cerveza.coccion">
+            <field name="name">BATCH-202605-001</field>
+            <field name="producto_id" ref="prod_tri_premiumlager_350ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Simon Espinoza</field>
+            <field name="fecha_coccion">2026-05-13</field>
+            <field name="horas_trabajadas">6.5</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">496.4</field>
+        </record>
+        <record id="coccion_hist_2" model="cerveza.coccion">
+            <field name="name">BATCH-202605-002</field>
+            <field name="producto_id" ref="prod_bun_stout_350ml"/>
+            <field name="receta_id" ref="receta_stout"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2026-05-01</field>
+            <field name="horas_trabajadas">6.7</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">486.0</field>
+        </record>
+        <record id="coccion_hist_3" model="cerveza.coccion">
+            <field name="name">BATCH-202604-003</field>
+            <field name="producto_id" ref="prod_bun_premiumlager_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2026-04-06</field>
+            <field name="horas_trabajadas">6.2</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">512.4</field>
+        </record>
+        <record id="coccion_hist_4" model="cerveza.coccion">
+            <field name="name">BATCH-202603-004</field>
+            <field name="producto_id" ref="prod_fuz_lager_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Pau SanMartin</field>
+            <field name="fecha_coccion">2026-03-06</field>
+            <field name="horas_trabajadas">7.5</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">511.5</field>
+        </record>
+        <record id="coccion_hist_5" model="cerveza.coccion">
+            <field name="name">BATCH-202602-005</field>
+            <field name="producto_id" ref="prod_kro_ipa_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2026-02-28</field>
+            <field name="horas_trabajadas">6.4</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">507.3</field>
+        </record>
+        <record id="coccion_hist_6" model="cerveza.coccion">
+            <field name="name">BATCH-202602-006</field>
+            <field name="producto_id" ref="prod_tri_apa_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Simon Espinoza</field>
+            <field name="fecha_coccion">2026-02-05</field>
+            <field name="horas_trabajadas">8.7</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">497.0</field>
+        </record>
+        <record id="coccion_hist_7" model="cerveza.coccion">
+            <field name="name">BATCH-202601-007</field>
+            <field name="producto_id" ref="prod_kro_ipa_350ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Lucas Espinoza</field>
+            <field name="fecha_coccion">2026-01-15</field>
+            <field name="horas_trabajadas">7.5</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">507.7</field>
+        </record>
+        <record id="coccion_hist_8" model="cerveza.coccion">
+            <field name="name">BATCH-202512-008</field>
+            <field name="producto_id" ref="prod_kro_ipa_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Lucas Espinoza</field>
+            <field name="fecha_coccion">2025-12-23</field>
+            <field name="horas_trabajadas">6.5</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">505.4</field>
+        </record>
+        <record id="coccion_hist_9" model="cerveza.coccion">
+            <field name="name">BATCH-202512-009</field>
+            <field name="producto_id" ref="prod_bun_premiumlager_350ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2025-12-13</field>
+            <field name="horas_trabajadas">7.8</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">499.0</field>
+        </record>
+        <record id="coccion_hist_10" model="cerveza.coccion">
+            <field name="name">BATCH-202512-010</field>
+            <field name="producto_id" ref="prod_tri_premiumlager_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2025-12-07</field>
+            <field name="horas_trabajadas">8.0</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">488.4</field>
+        </record>
+        <record id="coccion_hist_11" model="cerveza.coccion">
+            <field name="name">BATCH-202511-011</field>
+            <field name="producto_id" ref="prod_bun_stout_500ml"/>
+            <field name="receta_id" ref="receta_stout"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Lucas Espinoza</field>
+            <field name="fecha_coccion">2025-11-16</field>
+            <field name="horas_trabajadas">6.9</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">489.7</field>
+        </record>
+        <record id="coccion_hist_12" model="cerveza.coccion">
+            <field name="name">BATCH-202510-012</field>
+            <field name="producto_id" ref="prod_fuz_apa_350ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Lucas Espinoza</field>
+            <field name="fecha_coccion">2025-10-15</field>
+            <field name="horas_trabajadas">8.3</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">500.2</field>
+        </record>
+        <record id="coccion_hist_13" model="cerveza.coccion">
+            <field name="name">BATCH-202509-013</field>
+            <field name="producto_id" ref="prod_fuz_ipa_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2025-09-23</field>
+            <field name="horas_trabajadas">7.5</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">491.0</field>
+        </record>
+        <record id="coccion_hist_14" model="cerveza.coccion">
+            <field name="name">BATCH-202509-014</field>
+            <field name="producto_id" ref="prod_fuz_stout_350ml"/>
+            <field name="receta_id" ref="receta_stout"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Lucas Espinoza</field>
+            <field name="fecha_coccion">2025-09-08</field>
+            <field name="horas_trabajadas">8.9</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">512.7</field>
+        </record>
+        <record id="coccion_hist_15" model="cerveza.coccion">
+            <field name="name">BATCH-202508-015</field>
+            <field name="producto_id" ref="prod_tri_ipa_350ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2025-08-28</field>
+            <field name="horas_trabajadas">7.5</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">488.4</field>
+        </record>
+        <record id="coccion_hist_16" model="cerveza.coccion">
+            <field name="name">BATCH-202508-016</field>
+            <field name="producto_id" ref="prod_fuz_ipa_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Lucas Espinoza</field>
+            <field name="fecha_coccion">2025-08-12</field>
+            <field name="horas_trabajadas">6.2</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">511.3</field>
+        </record>
+        <record id="coccion_hist_17" model="cerveza.coccion">
+            <field name="name">BATCH-202507-017</field>
+            <field name="producto_id" ref="prod_kro_premiumlager_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Simon Espinoza</field>
+            <field name="fecha_coccion">2025-07-17</field>
+            <field name="horas_trabajadas">8.4</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">514.3</field>
+        </record>
+        <record id="coccion_hist_18" model="cerveza.coccion">
+            <field name="name">BATCH-202506-018</field>
+            <field name="producto_id" ref="prod_kro_ipa_350ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Pau SanMartin</field>
+            <field name="fecha_coccion">2025-06-29</field>
+            <field name="horas_trabajadas">8.8</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">490.0</field>
+        </record>
+        <record id="coccion_hist_19" model="cerveza.coccion">
+            <field name="name">BATCH-202506-019</field>
+            <field name="producto_id" ref="prod_fuz_lager_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Ignacio Socias</field>
+            <field name="fecha_coccion">2025-06-09</field>
+            <field name="horas_trabajadas">8.3</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">505.7</field>
+        </record>
+        <record id="coccion_hist_20" model="cerveza.coccion">
+            <field name="name">BATCH-202506-020</field>
+            <field name="producto_id" ref="prod_bun_premiumlager_500ml"/>
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="insumo_critico_id" ref="insumo_malta_pale"/>
+            <field name="maestro_cervecero">Pau SanMartin</field>
+            <field name="fecha_coccion">2025-06-02</field>
+            <field name="horas_trabajadas">7.1</field>
+            <field name="state">done</field>
+            <field name="litros_producidos">512.0</field>
+        </record>
+        <record id="v4_sale_order_1" model="sale.order">
+            <field name="partner_id" ref="bar_greed"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-03-19 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_1" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_1"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_4"/>
+            <field name="product_uom_qty">6.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_2" model="sale.order">
+            <field name="partner_id" ref="bar_elcairo"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-06-19 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_2" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_2"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_19"/>
+            <field name="product_uom_qty">5.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_3" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_1"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-04-16 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_3" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_3"/>
+            <field name="name">Bundor Premium Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_premiumlager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_3"/>
+            <field name="product_uom_qty">9.0</field>
+            <field name="price_unit">4600</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_4" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_2"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-05-20 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_4" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_4"/>
+            <field name="name">Bundor Stout 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_stout_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_2"/>
+            <field name="product_uom_qty">20.0</field>
+            <field name="price_unit">3000</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_5" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_4"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-01-02 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_5" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_5"/>
+            <field name="name">Bundor Premium Lager 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_premiumlager_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_9"/>
+            <field name="product_uom_qty">13.0</field>
+            <field name="price_unit">3200</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_6" model="sale.order">
+            <field name="partner_id" ref="bar_matureo"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-06-27 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_6" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_6"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_19"/>
+            <field name="product_uom_qty">56.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_7" model="sale.order">
+            <field name="partner_id" ref="bar_greed"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-10-02 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_7" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_7"/>
+            <field name="name">Fuzz Stout 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_stout_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_14"/>
+            <field name="product_uom_qty">32.0</field>
+            <field name="price_unit">2700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_8" model="sale.order">
+            <field name="partner_id" ref="bar_riverbar"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-10-19 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_8" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_8"/>
+            <field name="name">Fuzz APA 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_apa_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_12"/>
+            <field name="product_uom_qty">48.0</field>
+            <field name="price_unit">2500</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_9" model="sale.order">
+            <field name="partner_id" ref="bar_planb"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-03-19 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_9" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_9"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_4"/>
+            <field name="product_uom_qty">56.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_10" model="sale.order">
+            <field name="partner_id" ref="bar_matureo"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-03-26 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_10" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_10"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_4"/>
+            <field name="product_uom_qty">33.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_11" model="sale.order">
+            <field name="partner_id" ref="bar_barhistorico"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-03-17 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_11" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_11"/>
+            <field name="name">Kross IPA 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_kro_ipa_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_5"/>
+            <field name="product_uom_qty">20.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_12" model="sale.order">
+            <field name="partner_id" ref="bar_up"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-04-26 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_12" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_12"/>
+            <field name="name">Bundor Premium Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_premiumlager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_3"/>
+            <field name="product_uom_qty">11.0</field>
+            <field name="price_unit">3300</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_13" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_1"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-05-06 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_13" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_13"/>
+            <field name="name">Bundor Stout 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_stout_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_2"/>
+            <field name="product_uom_qty">53.0</field>
+            <field name="price_unit">3000</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_14" model="sale.order">
+            <field name="partner_id" ref="bar_riverbar"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-01-10 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_14" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_14"/>
+            <field name="name">Kross IPA 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_kro_ipa_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_8"/>
+            <field name="product_uom_qty">18.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_15" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_3"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-10-08 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_15" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_15"/>
+            <field name="name">Fuzz IPA 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_ipa_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_13"/>
+            <field name="product_uom_qty">5.0</field>
+            <field name="price_unit">4600</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_16" model="sale.order">
+            <field name="partner_id" ref="bar_up"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-10-10 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_16" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_16"/>
+            <field name="name">Fuzz IPA 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_ipa_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_13"/>
+            <field name="product_uom_qty">23.0</field>
+            <field name="price_unit">3300</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_17" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_8"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-09-15 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_17" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_17"/>
+            <field name="name">Fuzz Stout 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_stout_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_14"/>
+            <field name="product_uom_qty">17.0</field>
+            <field name="price_unit">2900</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_18" model="sale.order">
+            <field name="partner_id" ref="bar_greed"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-12-28 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_18" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_18"/>
+            <field name="name">Trilogía del Sur Premium Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_tri_premiumlager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_10"/>
+            <field name="product_uom_qty">52.0</field>
+            <field name="price_unit">3600</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_19" model="sale.order">
+            <field name="partner_id" ref="bar_barhistorico"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-07-03 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_19" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_19"/>
+            <field name="name">Kross IPA 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_kro_ipa_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_18"/>
+            <field name="product_uom_qty">8.0</field>
+            <field name="price_unit">2400</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_20" model="sale.order">
+            <field name="partner_id" ref="bar_up"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-06-28 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_20" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_20"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_19"/>
+            <field name="product_uom_qty">15.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_21" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_2"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-05-09 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_21" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_21"/>
+            <field name="name">Bundor Stout 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_stout_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_2"/>
+            <field name="product_uom_qty">9.0</field>
+            <field name="price_unit">3000</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_22" model="sale.order">
+            <field name="partner_id" ref="bar_up"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-06-12 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_22" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_22"/>
+            <field name="name">Bundor Premium Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_premiumlager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_20"/>
+            <field name="product_uom_qty">30.0</field>
+            <field name="price_unit">3300</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_23" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_4"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-03-27 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_23" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_23"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_4"/>
+            <field name="product_uom_qty">43.0</field>
+            <field name="price_unit">4400</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_24" model="sale.order">
+            <field name="partner_id" ref="bar_riverbar"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-05-25 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_24" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_24"/>
+            <field name="name">Bundor Stout 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_stout_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_2"/>
+            <field name="product_uom_qty">42.0</field>
+            <field name="price_unit">2300</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_25" model="sale.order">
+            <field name="partner_id" ref="bar_barhistorico"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-06-18 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_25" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_25"/>
+            <field name="name">Fuzz Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_fuz_lager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_19"/>
+            <field name="product_uom_qty">47.0</field>
+            <field name="price_unit">3700</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_26" model="sale.order">
+            <field name="partner_id" ref="bar_riverbar"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-11-23 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_26" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_26"/>
+            <field name="name">Bundor Stout 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_stout_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_11"/>
+            <field name="product_uom_qty">47.0</field>
+            <field name="price_unit">3900</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_27" model="sale.order">
+            <field name="partner_id" ref="bar_up"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-12-12 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_27" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_27"/>
+            <field name="name">Trilogía del Sur Premium Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_tri_premiumlager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_10"/>
+            <field name="product_uom_qty">5.0</field>
+            <field name="price_unit">3600</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_28" model="sale.order">
+            <field name="partner_id" ref="bar_elcairo"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-09-03 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_28" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_28"/>
+            <field name="name">Trilogía del Sur IPA 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_tri_ipa_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_15"/>
+            <field name="product_uom_qty">9.0</field>
+            <field name="price_unit">2500</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_29" model="sale.order">
+            <field name="partner_id" ref="bar_barhistorico"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2025-07-06 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_29" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_29"/>
+            <field name="name">Kross IPA 350ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_kro_ipa_350ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_18"/>
+            <field name="product_uom_qty">27.0</field>
+            <field name="price_unit">2400</field>
+            <field name="state">sale</field>
+        </record>
+        <record id="v4_sale_order_30" model="sale.order">
+            <field name="partner_id" ref="cliente_directo_6"/>
+            <field name="state">sale</field>
+            <field name="picking_policy">direct</field>
+            <field name="date_order">2026-04-18 01:43:00</field>
+        </record>
+        <record id="v4_sale_line_30" model="sale.order.line">
+            <field name="order_id" ref="v4_sale_order_30"/>
+            <field name="name">Bundor Premium Lager 500ml</field>
+            <field name="product_id" search="[('product_tmpl_id', '=', ref('prod_bun_premiumlager_500ml'))]"/>
+            <field name="lote_coccion_id" ref="coccion_hist_3"/>
+            <field name="product_uom_qty">15.0</field>
+            <field name="price_unit">4600</field>
+            <field name="state">sale</field>
+        </record>
+    </data>
+</odoo>

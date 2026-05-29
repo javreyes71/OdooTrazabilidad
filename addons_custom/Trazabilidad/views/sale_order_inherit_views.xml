@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- XPath: Inyectar lote_coccion_id en el FORMULARIO de Ventas   -->
+    <!-- Se inserta en la línea de pedido (sale.order.line) dentro     -->
+    <!-- del formulario de sale.order, justo después del campo         -->
+    <!-- product_uom_qty para máxima visibilidad operacional.         -->
+    <!-- ============================================================ -->
+    <record id="view_order_form_inherit_coccion" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.trazabilidad</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/list/field[@name='product_uom_qty']" position="after">
+                <field name="lote_coccion_id" optional="show"/>
+                <field name="margen_ganancia" optional="show"/>
+                <field name="rentabilidad_porcentaje" optional="show" widget="percentage"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

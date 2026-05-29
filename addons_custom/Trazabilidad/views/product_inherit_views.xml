@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_product_template_inherit_cerveza" model="ir.ui.view">
+        <field name="name">product.template.inherit.cerveza</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='categ_id']" position="after">
+                <field name="is_beer"/>
+                <field name="beer_style" invisible="not is_beer"/>
+                <field name="volumen_litros" invisible="not is_beer"/>
+                <field name="formato_ml" invisible="not is_beer"/>
+                <field name="precio_b2b" invisible="not is_beer"/>
+                <field name="precio_b2c" invisible="not is_beer"/>
+                <field name="abv" invisible="not is_beer"/>
+                <field name="ibu" invisible="not is_beer"/>
+            </xpath>
+            <xpath expr="//page[@name='sales']" position="inside">
+                <group string="Estadísticas de Rentabilidad (Ventas)" invisible="not is_beer">
+                    <field name="unidades_vendidas" readonly="1"/>
+                    <field name="total_ingresos" readonly="1"/>
+                    <field name="indice_rentabilidad" readonly="1" widget="percentage"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Herencia en Vista Tree para ver rentabilidad rápidamente -->
+    <record id="product_template_tree_view_inherit_trazabilidad" model="ir.ui.view">
+        <field name="name">product.template.tree.inherit.trazabilidad</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='list_price']" position="after">
+                <field name="unidades_vendidas" optional="show"/>
+                <field name="total_ingresos" optional="show" sum="Total Ingresos"/>
+                <field name="indice_rentabilidad" optional="show" widget="percentage" avg="Rentabilidad Media"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

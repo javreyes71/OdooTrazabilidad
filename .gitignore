@@ -1,0 +1,9 @@
+# .gitignore
+.DS_Store
+*.pyc
+__pycache__/
+*.log
+.env
+db_data/
+odoo_data/
+.vscode/

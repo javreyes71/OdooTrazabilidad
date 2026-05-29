@@ -1,0 +1,210 @@
+<odoo>
+    <!-- ============================================================ -->
+    <!-- ACCIONES DE VENTANA                                          -->
+    <!-- ============================================================ -->
+    <record id="action_cerveza_coccion" model="ir.actions.act_window">
+        <field name="name">Control de Cocciones</field>
+        <field name="res_model">cerveza.coccion</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_cerveza_lote_insumo" model="ir.actions.act_window">
+        <field name="name">Recepción de Insumos</field>
+        <field name="res_model">cerveza.lote.insumo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_cerveza_receta" model="ir.actions.act_window">
+        <field name="name">Recetario Maestro</field>
+        <field name="res_model">cerveza.receta</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- MENÚS PRINCIPALES                                            -->
+    <!-- ============================================================ -->
+    <menuitem id="menu_cerveceria_raiz" name="Planta Cervecera"/>
+    <menuitem id="menu_operaciones" name="Operaciones" parent="menu_cerveceria_raiz" sequence="10"/>
+    <menuitem id="menu_configuracion" name="Configuración" parent="menu_cerveceria_raiz" sequence="50"/>
+
+    <menuitem id="menu_coccion" name="Cocciones" parent="menu_operaciones" action="action_cerveza_coccion" sequence="10"/>
+    <menuitem id="menu_insumos" name="Lotes de Insumos" parent="menu_operaciones" action="action_cerveza_lote_insumo" sequence="20"/>
+    <menuitem id="menu_recetas" name="Recetas" parent="menu_configuracion" action="action_cerveza_receta"/>
+
+    <!-- ============================================================ -->
+    <!-- VISTA LIST: COCCIONES                                        -->
+    <!-- ============================================================ -->
+    <record id="view_cerveza_coccion_list" model="ir.ui.view">
+        <field name="name">cerveza.coccion.list</field>
+        <field name="model">cerveza.coccion</field>
+        <field name="arch" type="xml">
+            <list decoration-info="state == 'draft'" decoration-warning="state == 'fermenting'" decoration-success="state == 'done'">
+                <field name="name"/>
+                <field name="fecha_coccion"/>
+                <field name="maestro_cervecero"/>
+                <field name="receta_id"/>
+                <field name="producto_id"/>
+                <field name="litros_producidos"/>
+                <field name="litros_disponibles"/>
+                <field name="rendimiento"/>
+                <field name="costo_total_produccion" optional="hide"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'draft'"
+                       decoration-warning="state in ('mashing','fermenting')"
+                       decoration-success="state in ('ready','done')"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- VISTA FORM: COCCIONES — Con Notebook de Control              -->
+    <!-- ============================================================ -->
+    <record id="view_cerveza_coccion_form" model="ir.ui.view">
+        <field name="name">cerveza.coccion.form</field>
+        <field name="model">cerveza.coccion</field>
+        <field name="arch" type="xml">
+            <form>
+                <!-- 1. Workflow Visual: Barra de Estado -->
+                <header>
+                    <button name="action_start_mashing" type="object" string="Iniciar Maceración" class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="action_start_fermenting" type="object" string="Pasar a Fermentación" class="oe_highlight" invisible="state != 'mashing'"/>
+                    <button name="action_set_ready" type="object" string="Listo para Envasar" class="oe_highlight" invisible="state != 'fermenting'"/>
+                    <button name="action_button_done" type="object" string="Finalizar Lote" class="oe_highlight" invisible="state != 'ready'"/>
+                    <field name="state" widget="statusbar" options="{'clickable': '0'}"/>
+                </header>
+                <sheet>
+                    <!-- 2. Smart Button: Ventas vinculadas -->
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="action_view_sale_lines"
+                                type="object" icon="fa-usd">
+                            <field name="sale_line_count" widget="statinfo" string="Ventas"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group string="Proceso">
+                            <field name="name"/>
+                            <field name="fecha_coccion"/>
+                            <field name="fecha_envasado"/>
+                            <field name="maestro_cervecero"/>
+                            <field name="receta_id"/>
+                            <field name="producto_id"/>
+                        </group>
+                        <group string="Finanzas y Costos">
+                            <field name="horas_trabajadas"/>
+                            <field name="costo_mano_obra"/>
+                            <field name="costo_materia_prima"/>
+                            <field name="costo_total_produccion"/>
+                            <field name="costo_mp_por_litro"/>
+                            <field name="costo_mo_por_litro"/>
+                        </group>
+                        <group string="Trazabilidad de Origen">
+                            <field name="insumo_critico_id"/>
+                            <field name="tipo_insumo_critico"/>
+                            <field name="proveedor_insumo_id"/>
+                            <field name="responsable_id"/>
+                        </group>
+                        <group string="Producción y Stock">
+                            <field name="litros_producidos"/>
+                            <field name="litros_disponibles"/>
+                            <field name="rendimiento"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Control de Proceso">
+                            <field name="notas_proceso" placeholder="Registrar PH, densidades y observaciones químicas..."/>
+                        </page>
+                        <page string="Ingredientes de la Receta">
+                            <field name="descripcion_receta" widget="html" placeholder="Desglose de maltas y lúpulos..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- VISTAS: LOTES DE INSUMO (con alerta de stock)                -->
+    <!-- ============================================================ -->
+    <record id="view_cerveza_lote_insumo_list" model="ir.ui.view">
+        <field name="name">cerveza.lote.insumo.list</field>
+        <field name="model">cerveza.lote.insumo</field>
+        <field name="arch" type="xml">
+            <list decoration-danger="alerta_stock_bajo == True">
+                <field name="name"/>
+                <field name="tipo_insumo"/>
+                <field name="proveedor_id"/>
+                <field name="cantidad_kg"/>
+                <field name="cantidad_actual_kg"/>
+                <field name="consumo_promedio_lote"/>
+                <field name="alerta_stock_bajo" widget="boolean"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_cerveza_lote_insumo_form" model="ir.ui.view">
+        <field name="name">cerveza.lote.insumo.form</field>
+        <field name="model">cerveza.lote.insumo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Identificación">
+                            <field name="name"/>
+                            <field name="tipo_insumo"/>
+                            <field name="proveedor_id"/>
+                        </group>
+                        <group string="Inventario">
+                            <field name="cantidad_kg"/>
+                            <field name="cantidad_actual_kg"/>
+                            <field name="consumo_promedio_lote"/>
+                            <field name="alerta_stock_bajo" widget="boolean"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- VISTAS: RECETAS                                              -->
+    <!-- ============================================================ -->
+    <record id="view_cerveza_receta_list" model="ir.ui.view">
+        <field name="name">cerveza.receta.list</field>
+        <field name="model">cerveza.receta</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/><field name="tiempo_hervor"/>
+                <field name="costo_total_materia_prima" sum="Total"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_cerveza_receta_form" model="ir.ui.view">
+        <field name="name">cerveza.receta.form</field>
+        <field name="model">cerveza.receta</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/><field name="tiempo_hervor"/><field name="temperatura_macerado"/>
+                    </group>
+                    <notebook>
+                        <page string="Desglose de Ingredientes">
+                            <field name="linea_ids">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="cantidad_kg"/>
+                                    <field name="costo_unitario"/>
+                                    <field name="costo_subtotal"/>
+                                </list>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="costo_total_materia_prima"/>
+                            </group>
+                        </page>
+                        <page string="Descripción y Notas de Ingredientes">
+                            <field name="descripcion_receta" widget="html"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

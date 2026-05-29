@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        
+        <!-- A) Proveedores Reales (res.partner) -->
+        <record id="partner_maltas_patagonicas" model="res.partner">
+            <field name="name">Maltas Patagónicas SpA</field>
+            <field name="phone">+56 9 8765 4321</field>
+            <field name="email">ventas@maltaspatagonicas.cl</field>
+            <field name="city">Valdivia</field>
+            <field name="is_company">True</field>
+        </record>
+        
+        <record id="partner_lupulos_sur" model="res.partner">
+            <field name="name">Lúpulos del Sur</field>
+            <field name="phone">+56 9 1122 3344</field>
+            <field name="email">contacto@lupulosdelsur.cl</field>
+            <field name="city">Osorno</field>
+            <field name="is_company">True</field>
+        </record>
+        
+        <record id="partner_fermentis" model="res.partner">
+            <field name="name">Fermentis Insumos</field>
+            <field name="phone">+56 2 2345 6789</field>
+            <field name="city">Santiago</field>
+            <field name="is_company">True</field>
+        </record>
+
+        <!-- B) Lotes de Insumo en Bodega (cerveza.lote.insumo) -->
+        <record id="insumo_malta_pale" model="cerveza.lote.insumo">
+            <field name="name">MP-PALE-24</field>
+            <field name="tipo_insumo">malta</field>
+            <field name="proveedor_id" ref="partner_maltas_patagonicas"/>
+            <field name="cantidad_kg">1000.0</field>
+        </record>
+        
+        <record id="insumo_malta_avena" model="cerveza.lote.insumo">
+            <field name="name">MP-AVENA-24</field>
+            <field name="tipo_insumo">malta</field>
+            <field name="proveedor_id" ref="partner_maltas_patagonicas"/>
+            <field name="cantidad_kg">100.0</field>
+        </record>
+        
+        <record id="insumo_lupulo_citra" model="cerveza.lote.insumo">
+            <field name="name">LS-CITRA-24</field>
+            <field name="tipo_insumo">lupulo</field>
+            <field name="proveedor_id" ref="partner_lupulos_sur"/>
+            <field name="cantidad_kg">10.0</field>
+        </record>
+        
+        <record id="insumo_lupulo_fuggles" model="cerveza.lote.insumo">
+            <field name="name">LS-FUGG-24</field>
+            <field name="tipo_insumo">lupulo</field>
+            <field name="proveedor_id" ref="partner_lupulos_sur"/>
+            <field name="cantidad_kg">5.0</field>
+        </record>
+
+        <!-- C) Recetas (cerveza.receta) -->
+        <record id="receta_stout" model="cerveza.receta">
+            <field name="name">Bundor Belial Stout (Batch 500L)</field>
+            <field name="tiempo_hervor">90</field>
+            <field name="temperatura_macerado">67.0</field>
+            <field name="descripcion_receta"><![CDATA[<p><b>Base:</b> 80kg Malta Pale Ale.<br/><b>Especiales:</b> 10kg Copos de Avena, 5kg Malta Chocolate, 5kg Cebada Tostada.<br/><b>Lúpulo:</b> 1.5kg Fuggles (60 min).<br/><b>Levadura:</b> S-04 (500g).</p>]]></field>
+        </record>
+        
+        <!-- Ingredientes Stout -->
+        <record id="receta_stout_linea_1" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_stout"/>
+            <field name="name">Malta Pale Ale</field>
+            <field name="cantidad_kg">80.0</field>
+            <field name="costo_unitario">12000.0</field>
+        </record>
+        <record id="receta_stout_linea_2" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_stout"/>
+            <field name="name">Maltas Especiales (Avena, Chocolate)</field>
+            <field name="cantidad_kg">20.0</field>
+            <field name="costo_unitario">15000.0</field>
+        </record>
+        <record id="receta_stout_linea_3" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_stout"/>
+            <field name="name">Lúpulo Fuggles</field>
+            <field name="cantidad_kg">1.5</field>
+            <field name="costo_unitario">80000.0</field>
+        </record>
+        <record id="receta_stout_linea_4" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_stout"/>
+            <field name="name">Levadura S-04</field>
+            <field name="cantidad_kg">0.5</field>
+            <field name="costo_unitario">100000.0</field>
+        </record>
+        
+        <record id="receta_apa" model="cerveza.receta">
+            <field name="name">Fuzz Pale Ale - APA (Batch 500L)</field>
+            <field name="tiempo_hervor">60</field>
+            <field name="temperatura_macerado">65.0</field>
+            <field name="descripcion_receta"><![CDATA[<p><b>Base:</b> 100kg Malta Pale Ale.<br/><b>Especiales:</b> 10kg Caramelo 40L.<br/><b>Lúpulos:</b> 1kg Cascade (60 min), 1.5kg Citra (Dry Hop).<br/><b>Levadura:</b> US-05 (500g).</p>]]></field>
+        </record>
+
+        <!-- Ingredientes APA -->
+        <record id="receta_apa_linea_1" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="name">Malta Pale Ale</field>
+            <field name="cantidad_kg">100.0</field>
+            <field name="costo_unitario">10000.0</field>
+        </record>
+        <record id="receta_apa_linea_2" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="name">Malta Caramelo 40L</field>
+            <field name="cantidad_kg">10.0</field>
+            <field name="costo_unitario">12000.0</field>
+        </record>
+        <record id="receta_apa_linea_3" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="name">Lúpulo Cascade y Citra</field>
+            <field name="cantidad_kg">2.5</field>
+            <field name="costo_unitario">85000.0</field>
+        </record>
+        <record id="receta_apa_linea_4" model="cerveza.receta.linea">
+            <field name="receta_id" ref="receta_apa"/>
+            <field name="name">Levadura US-05</field>
+            <field name="cantidad_kg">0.5</field>
+            <field name="costo_unitario">100000.0</field>
+        </record>
+
+        <!-- D) Productos Finales (product.template) -->
+        <record id="producto_stout_50l" model="product.template">
+            <field name="name">Bundor Belial Stout - Barril 50L</field>
+            <field name="type">consu</field>
+            <field name="list_price">85000.0</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">stout</field>
+        </record>
+        
+        <record id="producto_apa_50l" model="product.template">
+            <field name="name">Fuzz Pale Ale - Barril 50L</field>
+            <field name="type">consu</field>
+            <field name="list_price">75000.0</field>
+            <field name="is_beer">True</field>
+            <field name="beer_style">ipa</field>
+        </record>
+
+    </data>
+</odoo>
