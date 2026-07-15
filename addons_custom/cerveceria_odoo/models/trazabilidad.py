@@ -97,6 +97,17 @@ class CervezaCoccion(models.Model):
     litros_producidos = fields.Float(string='Litros Obtenidos', required=False, default=0.0)
     notas_proceso = fields.Text(string='Notas de Proceso', help='Registro de PH, densidades y observaciones químicas.')
 
+    # --- Trazabilidad Avanzada y Calidad ---
+    tanque_utilizado = fields.Char(string='Tanque/Fermentador', help='Identificador del equipo utilizado (ej: F-01).')
+    operador_macerado = fields.Char(string='Operador Macerado', help='Nombre del operador a cargo de la etapa de maceración.')
+    estado_calidad = fields.Selection([
+        ('pendiente', 'Pendiente Lab'),
+        ('aprobado', 'Aprobado'),
+        ('rechazado', 'Rechazado (Descarte)')
+    ], string='Estado de Calidad', default='pendiente', tracking=True)
+    desviacion_temperatura = fields.Boolean(string='Hubo Desviación de Temp.', default=False)
+    notas_laboratorio = fields.Text(string='Resultados de Laboratorio')
+
     # --- Variables Financieras y de Costo ---
     horas_trabajadas = fields.Float(string='Horas Trabajadas', default=0.0, help='Horas invertidas por el Maestro Cervecero.')
     costo_mano_obra = fields.Float(string='Costo Mano de Obra ($)', compute='_compute_costos', store=True)

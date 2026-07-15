@@ -30,6 +30,25 @@
     </record>
 
     <!-- ============================================================ -->
+    <!-- VISTA LIST: Ventas Mensuales                                 -->
+    <!-- ============================================================ -->
+    <record id="view_sale_line_list_dashboard" model="ir.ui.view">
+        <field name="name">sale.order.line.list.dashboard.trazabilidad</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <list string="Líneas de Venta">
+                <field name="order_id"/>
+                <field name="create_date"/>
+                <field name="product_id"/>
+                <field name="lote_coccion_id"/>
+                <field name="product_uom_qty"/>
+                <field name="price_subtotal"/>
+                <field name="state" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
     <!-- VISTA PIVOT: Ventas Mensuales por Producto                   -->
     <!-- ============================================================ -->
     <record id="view_sale_line_pivot_dashboard" model="ir.ui.view">

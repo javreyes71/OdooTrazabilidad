@@ -1,0 +1,8 @@
+# Terminal 1 — Docker (si no está corriendo)
+docker compose up -d
+
+# Terminal 2 — Backend
+cd dashboard_externo
+uvicorn main:app --reload
+
+GROQ API: tu_api_key_aqui

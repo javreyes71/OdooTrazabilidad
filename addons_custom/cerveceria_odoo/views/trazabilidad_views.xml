@@ -106,8 +106,20 @@
                             <field name="litros_disponibles"/>
                             <field name="rendimiento"/>
                         </group>
+                        <group string="Trazabilidad Avanzada y Calidad">
+                            <field name="tanque_utilizado"/>
+                            <field name="operador_macerado"/>
+                            <field name="estado_calidad" widget="badge" 
+                                   decoration-danger="estado_calidad == 'rechazado'" 
+                                   decoration-success="estado_calidad == 'aprobado'" 
+                                   decoration-info="estado_calidad == 'pendiente'"/>
+                            <field name="desviacion_temperatura"/>
+                        </group>
                     </group>
                     <notebook>
+                        <page string="Resultados de Laboratorio">
+                            <field name="notas_laboratorio" placeholder="Registro de análisis, microbiología, desviaciones..."/>
+                        </page>
                         <page string="Control de Proceso">
                             <field name="notas_proceso" placeholder="Registrar PH, densidades y observaciones químicas..."/>
                         </page>

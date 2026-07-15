@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- PRODUCTOS -->
+    <record id="product_malta_pilsner" model="product.product">
+        <field name="name">Malta Pilsner</field>
+        <field name="type">consu</field>
+        <field name="es_insumo_cervecero">True</field>
+        <field name="tipo_insumo_cervecero">malta</field>
+        <field name="origen_insumo">Alemania</field>
+    </record>
+    <record id="product_malta_caramel" model="product.product">
+        <field name="name">Malta Caramel 60L</field>
+        <field name="type">consu</field>
+        <field name="es_insumo_cervecero">True</field>
+        <field name="tipo_insumo_cervecero">malta</field>
+        <field name="origen_insumo">Bélgica</field>
+    </record>
+    <record id="product_lupulo_cascade" model="product.product">
+        <field name="name">Lúpulo Cascade</field>
+        <field name="type">consu</field>
+        <field name="es_insumo_cervecero">True</field>
+        <field name="tipo_insumo_cervecero">lupulo</field>
+        <field name="origen_insumo">USA</field>
+        <field name="alpha_acidos">5.5</field>
+    </record>
+    <record id="product_lupulo_centennial" model="product.product">
+        <field name="name">Lúpulo Centennial</field>
+        <field name="type">consu</field>
+        <field name="es_insumo_cervecero">True</field>
+        <field name="tipo_insumo_cervecero">lupulo</field>
+        <field name="origen_insumo">USA</field>
+        <field name="alpha_acidos">10.0</field>
+    </record>
+    <record id="product_levadura_us05" model="product.product">
+        <field name="name">Levadura US-05 American Ale</field>
+        <field name="type">consu</field>
+        <field name="es_insumo_cervecero">True</field>
+        <field name="tipo_insumo_cervecero">levadura</field>
+        <field name="origen_insumo">USA - Fermentis</field>
+    </record>
+
+    <!-- RECETA 1 — American Pale Ale -->
+    <record id="receta_pale_ale" model="cerveceria.receta">
+        <field name="name">American Pale Ale</field>
+        <field name="estilo_cerveza">ale</field>
+        <field name="volumen_produccion">100</field>
+        <field name="densidad_original">1.052</field>
+        <field name="densidad_final">1.011</field>
+        <field name="ibu">35</field>
+        <field name="srm">6</field>
+        <field name="tiempo_macerado">60</field>
+        <field name="tiempo_coccion">60</field>
+        <field name="tiempo_fermentacion">7</field>
+        <field name="tiempo_madurado">14</field>
+        <field name="estado">activa</field>
+        <field name="descripcion">Pale Ale americana equilibrada con notas cítricas de lúpulo Cascade.</field>
+    </record>
+    <record id="ing_pale_ale_malta" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_pale_ale"/>
+        <field name="product_id" ref="product_malta_pilsner"/>
+        <field name="tipo_ingrediente">malta</field>
+        <field name="cantidad">18</field>
+        <field name="uom_id" ref="uom.product_uom_kgm"/>
+        <field name="momento_adicion">macerado</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="ing_pale_ale_caramel" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_pale_ale"/>
+        <field name="product_id" ref="product_malta_caramel"/>
+        <field name="tipo_ingrediente">malta</field>
+        <field name="cantidad">2</field>
+        <field name="uom_id" ref="uom.product_uom_kgm"/>
+        <field name="momento_adicion">macerado</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="ing_pale_ale_lupulo" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_pale_ale"/>
+        <field name="product_id" ref="product_lupulo_cascade"/>
+        <field name="tipo_ingrediente">lupulo</field>
+        <field name="cantidad">150</field>
+        <field name="uom_id" ref="uom.product_uom_gram"/>
+        <field name="momento_adicion">coccion</field>
+        <field name="sequence">3</field>
+    </record>
+    <record id="ing_pale_ale_levadura" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_pale_ale"/>
+        <field name="product_id" ref="product_levadura_us05"/>
+        <field name="tipo_ingrediente">levadura</field>
+        <field name="cantidad">2</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="momento_adicion">fermentacion</field>
+        <field name="sequence">4</field>
+    </record>
+
+    <!-- RECETA 2 — American IPA -->
+    <record id="receta_ipa" model="cerveceria.receta">
+        <field name="name">American IPA</field>
+        <field name="estilo_cerveza">ipa</field>
+        <field name="volumen_produccion">100</field>
+        <field name="densidad_original">1.065</field>
+        <field name="densidad_final">1.013</field>
+        <field name="ibu">65</field>
+        <field name="srm">8</field>
+        <field name="tiempo_macerado">75</field>
+        <field name="tiempo_coccion">60</field>
+        <field name="tiempo_fermentacion">10</field>
+        <field name="tiempo_madurado">21</field>
+        <field name="estado">activa</field>
+        <field name="descripcion">IPA americana con fuerte presencia de lúpulo Centennial. Alta amargor y aroma intenso.</field>
+    </record>
+    <record id="ing_ipa_malta" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_ipa"/>
+        <field name="product_id" ref="product_malta_pilsner"/>
+        <field name="tipo_ingrediente">malta</field>
+        <field name="cantidad">22</field>
+        <field name="uom_id" ref="uom.product_uom_kgm"/>
+        <field name="momento_adicion">macerado</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="ing_ipa_lupulo_centennial" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_ipa"/>
+        <field name="product_id" ref="product_lupulo_centennial"/>
+        <field name="tipo_ingrediente">lupulo</field>
+        <field name="cantidad">300</field>
+        <field name="uom_id" ref="uom.product_uom_gram"/>
+        <field name="momento_adicion">coccion</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="ing_ipa_lupulo_dry" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_ipa"/>
+        <field name="product_id" ref="product_lupulo_cascade"/>
+        <field name="tipo_ingrediente">lupulo</field>
+        <field name="cantidad">100</field>
+        <field name="uom_id" ref="uom.product_uom_gram"/>
+        <field name="momento_adicion">fermentacion</field>
+        <field name="notas">Dry hopping</field>
+        <field name="sequence">3</field>
+    </record>
+    <record id="ing_ipa_levadura" model="cerveceria.receta.ingrediente">
+        <field name="receta_id" ref="receta_ipa"/>
+        <field name="product_id" ref="product_levadura_us05"/>
+        <field name="tipo_ingrediente">levadura</field>
+        <field name="cantidad">2</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="momento_adicion">fermentacion</field>
+        <field name="sequence">4</field>
+    </record>
+
+    <!-- LOTE 1 — Pale Ale Liberado -->
+    <record id="lote_pale_ale_001" model="cerveceria.lote">
+        <field name="name">LOTE-2026-0001</field>
+        <field name="descripcion">Batch Verano 2026</field>
+        <field name="receta_id" ref="receta_pale_ale"/>
+        <field name="volumen_planificado">100</field>
+        <field name="volumen_real">96</field>
+        <field name="fecha_inicio">2026-01-10</field>
+        <field name="fecha_fin_estimada">2026-02-10</field>
+        <field name="fecha_fin_real">2026-02-08</field>
+        <field name="fecha_envasado">2026-02-08</field>
+        <field name="densidad_original_real">1.051</field>
+        <field name="densidad_final_real">1.010</field>
+        <field name="ibu_real">34</field>
+        <field name="temperatura_fermentacion">19.5</field>
+        <field name="estado">en_proceso</field>
+        <field name="notas_produccion">Lote sin incidencias. Fermentación estable. Excelente rendimiento.</field>
+    </record>
+    <record id="traz_lote1_malta" model="cerveceria.trazabilidad">
+        <field name="lote_id" ref="lote_pale_ale_001"/>
+        <field name="product_id" ref="product_malta_pilsner"/>
+        <field name="tipo_insumo">malta</field>
+        <field name="cantidad_usada">18</field>
+        <field name="uom_id" ref="uom.product_uom_kgm"/>
+        <field name="etapa_uso">macerado</field>
+        <field name="fecha_uso">2026-01-10 08:00:00</field>
+        <field name="costo_unitario">1500</field>
+        <field name="conforme">True</field>
+    </record>
+    <record id="traz_lote1_lupulo" model="cerveceria.trazabilidad">
+        <field name="lote_id" ref="lote_pale_ale_001"/>
+        <field name="product_id" ref="product_lupulo_cascade"/>
+        <field name="tipo_insumo">lupulo</field>
+        <field name="cantidad_usada">150</field>
+        <field name="uom_id" ref="uom.product_uom_gram"/>
+        <field name="etapa_uso">coccion</field>
+        <field name="fecha_uso">2026-01-10 11:00:00</field>
+        <field name="costo_unitario">85</field>
+        <field name="conforme">True</field>
+    </record>
+    <record id="traz_lote1_levadura" model="cerveceria.trazabilidad">
+        <field name="lote_id" ref="lote_pale_ale_001"/>
+        <field name="product_id" ref="product_levadura_us05"/>
+        <field name="tipo_insumo">levadura</field>
+        <field name="cantidad_usada">2</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="etapa_uso">fermentacion</field>
+        <field name="fecha_uso">2026-01-10 16:00:00</field>
+        <field name="costo_unitario">4500</field>
+        <field name="conforme">True</field>
+    </record>
+    <record id="ctrl_lote1_macerado" model="cerveceria.control.calidad">
+        <field name="lote_id" ref="lote_pale_ale_001"/>
+        <field name="etapa_control">macerado</field>
+        <field name="fecha_control">2026-01-10 09:00:00</field>
+        <field name="temperatura">65.5</field>
+        <field name="temperatura_min">63.0</field>
+        <field name="temperatura_max">68.0</field>
+        <field name="ph">5.4</field>
+        <field name="ph_min">5.2</field>
+        <field name="ph_max">5.6</field>
+        <field name="resultado_general">aprobado</field>
+        <field name="observaciones">Temperatura y pH dentro de rango.</field>
+    </record>
+    <record id="ctrl_lote1_terminado" model="cerveceria.control.calidad">
+        <field name="lote_id" ref="lote_pale_ale_001"/>
+        <field name="etapa_control">producto_terminado</field>
+        <field name="fecha_control">2026-02-07 10:00:00</field>
+        <field name="temperatura">4.0</field>
+        <field name="temperatura_min">2.0</field>
+        <field name="temperatura_max">6.0</field>
+        <field name="ph">4.3</field>
+        <field name="ph_min">4.0</field>
+        <field name="ph_max">4.6</field>
+        <field name="densidad">1.010</field>
+        <field name="abv_estimado">5.38</field>
+        <field name="turbidez">cristalina</field>
+        <field name="color_visual">Dorado claro</field>
+        <field name="aroma">Cítrico, floral con notas de pomelo</field>
+        <field name="sabor">Equilibrado, amargor moderado, final seco</field>
+        <field name="carbonatacion">2.4</field>
+        <field name="resultado_general">aprobado</field>
+        <field name="observaciones">Producto conforme. Aprobado para distribución.</field>
+    </record>
+
+    <!-- LOTE 2 — IPA Problemático -->
+    <record id="lote_ipa_002" model="cerveceria.lote">
+        <field name="name">LOTE-2026-0002</field>
+        <field name="descripcion">IPA Invierno 2026</field>
+        <field name="receta_id" ref="receta_ipa"/>
+        <field name="volumen_planificado">100</field>
+        <field name="volumen_real">0</field>
+        <field name="fecha_inicio">2026-02-15</field>
+        <field name="fecha_fin_estimada">2026-03-20</field>
+        <field name="temperatura_fermentacion">22.0</field>
+        <field name="estado">fermentando</field>
+        <field name="notas_produccion">Temperatura de fermentación elevada. Monitorear.</field>
+    </record>
+    <record id="traz_lote2_malta" model="cerveceria.trazabilidad">
+        <field name="lote_id" ref="lote_ipa_002"/>
+        <field name="product_id" ref="product_malta_pilsner"/>
+        <field name="tipo_insumo">malta</field>
+        <field name="cantidad_usada">25</field>
+        <field name="uom_id" ref="uom.product_uom_kgm"/>
+        <field name="etapa_uso">macerado</field>
+        <field name="fecha_uso">2026-02-15 08:00:00</field>
+        <field name="costo_unitario">1500</field>
+        <field name="conforme">False</field>
+        <field name="notas">Se usaron 3 kg más de malta por error de pesaje.</field>
+    </record>
+    <record id="traz_lote2_lupulo" model="cerveceria.trazabilidad">
+        <field name="lote_id" ref="lote_ipa_002"/>
+        <field name="product_id" ref="product_lupulo_centennial"/>
+        <field name="tipo_insumo">lupulo</field>
+        <field name="cantidad_usada">300</field>
+        <field name="uom_id" ref="uom.product_uom_gram"/>
+        <field name="etapa_uso">coccion</field>
+        <field name="fecha_uso">2026-02-15 11:00:00</field>
+        <field name="costo_unitario">95</field>
+        <field name="conforme">True</field>
+    </record>
+    <record id="ctrl_lote2_fermentacion" model="cerveceria.control.calidad">
+        <field name="lote_id" ref="lote_ipa_002"/>
+        <field name="etapa_control">fermentacion_activa</field>
+        <field name="fecha_control">2026-02-18 10:00:00</field>
+        <field name="temperatura">24.5</field>
+        <field name="temperatura_min">18.0</field>
+        <field name="temperatura_max">22.0</field>
+        <field name="ph">4.8</field>
+        <field name="ph_min">4.0</field>
+        <field name="ph_max">4.6</field>
+        <field name="densidad">1.045</field>
+        <field name="resultado_general">rechazado</field>
+        <field name="observaciones">Temperatura fuera de rango. pH elevado. Posible contaminación.</field>
+        <field name="accion_correctiva">Bajar temperatura a 19°C. Tomar muestra para análisis microbiológico.</field>
+    </record>
+
+</odoo>
